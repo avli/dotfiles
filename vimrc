@@ -17,6 +17,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fireplace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,9 +61,11 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<C-g>u\<CR>"
 " Plugins settings
 let g:jedi#auto_close_doc = 1
 
+let delimitMate_expand_cr = 1
 let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
-au FileType python setlocal completeopt-=preview
+au FileType python,clojure setlocal completeopt-=preview
+au FileType clojure let b:delimitMate_quotes = "\" '"
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''

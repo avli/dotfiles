@@ -52,6 +52,8 @@ catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
 
+hi SpellBad cterm=underline
+
 au BufWritePre * :%s/\s\+$//e
 
 " The below mapping will change the behavior of the <Enter> key when the popup

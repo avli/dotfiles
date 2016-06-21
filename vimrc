@@ -33,7 +33,8 @@ set ignorecase
 set whichwrap+=<,>,h,l
 
 set tabstop=4
-set shiftwidth=2
+set shiftwidth=4
+set smarttab
 set expandtab
 set ai
 set number

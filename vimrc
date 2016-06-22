@@ -31,6 +31,15 @@ let mapleader = ","
 let g:mapleader = ","
 
 set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+else
+    set wildignore+=.git\*,.hg\*,.svn\*
+endif
+
 set ignorecase
 set whichwrap+=<,>,h,l
 
@@ -38,7 +47,9 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
-set ai
+set backspace=2
+set softtabstop=4
+set autoindent
 set number
 set hlsearch
 set ruler
@@ -51,6 +62,18 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
+
+" Toggle list on and off
+map <leader>ll :setlocal list!<cr>
+
+" Toggle line wrap on and off
+map <leader>ww :setlocal wrap!<cr>
+
+" Toggle spell checking
+map <leader>ss :setlocal spell!<cr>
 
 hi SpellBad cterm=underline
 

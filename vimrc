@@ -52,7 +52,6 @@ set softtabstop=4
 set autoindent
 set number
 set hlsearch
-set ruler
 set ignorecase
 set backspace=2
 set laststatus=2

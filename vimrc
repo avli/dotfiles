@@ -90,7 +90,7 @@ let delimitMate_expand_cr = 1
 let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
-au FileType clojure let b:delimitMate_quotes = "\" '"
+au FileType clojure let b:delimitMate_quotes = "\""
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''

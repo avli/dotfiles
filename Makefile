@@ -12,6 +12,7 @@ backup:
 	cp -f $(HOME)/.bash_aliases $(HOME)/.bash_aliases.bak 2>/dev/null || :
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
+	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
 
 bash:
 	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile
@@ -28,3 +29,6 @@ vim:
 	fi ;
 	ln -sF $(current_dir)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
+
+zsh:
+	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc

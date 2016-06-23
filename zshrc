@@ -7,4 +7,6 @@ plugins=(git brew brew-cask tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-[ -f .zshrc.local ] && source .zshrc.local
+if [ -f .zshrc.local ]; then
+    source .zshrc.local
+fi

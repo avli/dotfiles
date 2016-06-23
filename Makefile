@@ -9,7 +9,7 @@ deps:
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :
 	cp -f $(HOME)/.bashrc $(HOME)/.bashrc.bak 2>/dev/null || :
-	cp -f $(HOME)/.bash_aliases $(HOME)/.bash_aliases.bak 2>/dev/null || :
+	cp -f $(HOME)/.aliases $(HOME)/.aliases.bak 2>/dev/null || :
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
@@ -17,7 +17,7 @@ backup:
 bash:
 	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile
 	ln -sF $(current_dir)/bashrc $(HOME)/.bashrc
-	ln -sF $(current_dir)/bash_aliases $(HOME)/.bash_aliases
+	ln -sF $(current_dir)/aliases $(HOME)/.aliases
 
 tmux:
 	ln -sF $(current_dir)/tmux.conf $(HOME)/.tmux.conf

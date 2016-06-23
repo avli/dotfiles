@@ -1,4 +1,4 @@
-[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+[ -f ~/.aliases ] && source ~/.aliases
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -18,3 +18,6 @@ if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
     GIT_PROMPT_THEME=Default
     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"

@@ -1,9 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="ys"
+ZSH_THEME="pygmalion"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
-plugins=(git brew brew-cask tmux)
+plugins=(git brew brew-cask npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="ys"
+ZSH_THEME="pygmalion"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 

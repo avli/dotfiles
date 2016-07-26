@@ -4,3 +4,4 @@ alias :q="exit"
 alias :q!="exit"
 alias :e="vim"
 alias vi=vim
+alias e="emacs -nw"

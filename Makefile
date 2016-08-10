@@ -3,7 +3,6 @@ all: backup deps bash tmux vim
 current_dir = $(shell pwd)
 
 deps:
-	brew install bash-completion bash-git-prompt
 	brew install --override-system-vi vim
 
 backup:

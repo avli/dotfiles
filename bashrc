@@ -6,7 +6,7 @@ fi
 
 export PATH=$HOME/anaconda3/bin:/usr/local/sbin:/usr/local/texlive/2015/bin/x86_64-darwin:$PATH
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="bash-\v$ "
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"

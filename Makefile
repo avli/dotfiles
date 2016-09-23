@@ -4,6 +4,7 @@ current_dir = $(shell pwd)
 
 deps:
 	brew install --override-system-vi vim
+	brew install bash-git-prompt
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :

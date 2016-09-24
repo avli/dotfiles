@@ -4,7 +4,6 @@ current_dir = $(shell pwd)
 
 deps:
 	brew install --override-system-vi vim
-	brew install bash-git-prompt
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :
@@ -29,7 +28,6 @@ vim:
 	  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim ; \
 	fi ;
 	ln -sF $(current_dir)/vimrc $(HOME)/.vimrc
-	ln -sF $(current_dir)/gvimrc $(HOME)/.gvimrc
 	vim +PluginInstall +qall
 
 zsh:

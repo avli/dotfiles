@@ -55,6 +55,7 @@ set hlsearch
 set ignorecase
 set backspace=2
 set laststatus=2
+set hidden
 
 try
     colorscheme wombat
@@ -95,3 +96,4 @@ au FileType clojure let b:delimitMate_quotes = "\""
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
+py import sys; sys.path.append('/Users/andrey/anaconda3/lib/python3.5/site-packages')

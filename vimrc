@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'sheerun/vim-wombat-scheme'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'jlanzarotta/bufexplorer'
@@ -58,7 +58,7 @@ set laststatus=2
 set hidden
 
 try
-    colorscheme wombat
+    colorscheme jellybeans
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry

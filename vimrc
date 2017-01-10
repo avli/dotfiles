@@ -63,11 +63,7 @@ set laststatus=2
 set hidden
 set cursorline
 
-if has("gui_running")
-    set bg=light
-else
-    set bg=dark
-end
+set background=light
 
 try
     colorscheme solarized

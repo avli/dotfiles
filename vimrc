@@ -126,4 +126,8 @@ let g:airline_right_sep=''
 
 let g:SuperTabSetDefaultCompletionType='context'
 
+" Enables solarized background toggle feature see
+" (https://github.com/altercation/vim-colors-solarized/issues/40)
+call togglebg#map("")
+
 py import sys; sys.path.append('/Users/andrey/miniconda3/lib/python3.5/site-packages')

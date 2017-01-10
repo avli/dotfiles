@@ -107,7 +107,6 @@ set guioptions-=r
 " Disable left scrollbar
 set guioptions-=L
 
-
 " The below mapping will change the behavior of the <Enter> key when the popup
 " menu is visible. In that case the Enter key will simply select the highlighted
 " menu item, just as <C-Y> does.

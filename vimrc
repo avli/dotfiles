@@ -11,16 +11,19 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,15 +55,22 @@ set expandtab
 set backspace=2
 set softtabstop=4
 set autoindent
-set number
+set relativenumber
 set hlsearch
 set ignorecase
 set backspace=2
 set laststatus=2
 set hidden
+set cursorline
+
+if has("gui_running")
+    set bg=light
+else
+    set bg=dark
+end
 
 try
-    colorscheme jellybeans
+    colorscheme solarized
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -77,9 +87,30 @@ map <leader>ww :setlocal wrap!<cr>
 " Toggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
+" Change to the directory of the currently open file with the <leader>cd
+" combination
+map <leader>cd :cd %:p:h<cr>
+
+" Disable all bells
+se vb t_vb=
+
 hi SpellBad cterm=underline
 
+" Remove trailing whitespaces on save
 au BufWritePre * :%s/\s\+$//e
+
+" Keep one line above/below the cursor while scrolling
+set scrolloff=1
+
+" Set font in GUI
+set guifont=PragmataPro:h12
+
+" Disable right scrollbar
+set guioptions-=r
+
+" Disable left scrollbar
+set guioptions-=L
+
 
 " The below mapping will change the behavior of the <Enter> key when the popup
 " menu is visible. In that case the Enter key will simply select the highlighted
@@ -97,5 +128,7 @@ au FileType clojure let b:delimitMate_quotes = "\""
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+let g:SuperTabSetDefaultCompletionType='context'
 
 py import sys; sys.path.append('/Users/andrey/anaconda3/lib/python3.5/site-packages')

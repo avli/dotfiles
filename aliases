@@ -5,3 +5,5 @@ alias :q!="exit"
 alias :e="vim"
 alias vi=vim
 alias e="emacs -nw"
+alias octave="octave-cli"
+alias jn="jupyter notebook"

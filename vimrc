@@ -131,4 +131,4 @@ let g:airline_right_sep=''
 
 let g:SuperTabSetDefaultCompletionType='context'
 
-py import sys; sys.path.append('/Users/andrey/anaconda3/lib/python3.5/site-packages')
+py import sys; sys.path.append('/Users/andrey/miniconda3/lib/python3.5/site-packages')

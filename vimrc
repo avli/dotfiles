@@ -56,7 +56,7 @@ set expandtab
 set backspace=2
 set softtabstop=4
 set autoindent
-set relativenumber
+set number
 set hlsearch
 set ignorecase
 set backspace=2

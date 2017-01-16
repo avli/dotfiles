@@ -5,7 +5,7 @@ DISABLE_LS_COLORS="true"
 
 DEFAULT_USER=`whoami`
 
-plugins=(git brew brew-cask npm tmux)
+plugins=(git brew brew-cask npm pip tmux)
 
 source $ZSH/oh-my-zsh.sh
 

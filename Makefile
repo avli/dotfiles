@@ -3,7 +3,9 @@ all: backup deps bash tmux vim
 current_dir = $(shell pwd)
 
 deps:
-	brew install --override-system-vi vim
+	brew update
+	brew install --force --override-system-vi vim
+	brew install --force reattach-to-user-namespace
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :

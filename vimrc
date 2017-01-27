@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'jlanzarotta/bufexplorer'
@@ -23,7 +22,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'ervandew/supertab'
 Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
@@ -67,7 +65,7 @@ set cursorline
 set background=light
 
 try
-    colorscheme solarized
+    colorscheme default
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -124,11 +122,5 @@ au FileType clojure let b:delimitMate_quotes = "\""
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-
-let g:SuperTabSetDefaultCompletionType='context'
-
-" Enables solarized background toggle feature see
-" (https://github.com/altercation/vim-colors-solarized/issues/40)
-call togglebg#map("")
 
 py import sys; sys.path.append('/Users/andrey/miniconda3/lib/python3.5/site-packages')

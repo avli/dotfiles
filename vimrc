@@ -10,7 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'jlanzarotta/bufexplorer'
@@ -21,7 +22,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
@@ -65,7 +65,7 @@ set cursorline
 set background=light
 
 try
-    colorscheme default
+    colorscheme base16-tomorrow-night
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -100,16 +100,19 @@ set scrolloff=1
 " Set font in GUI
 set guifont=PragmataPro:h12
 
+" The font I use supports ligatures, let's turn them on
+if has('gui_running')
+    set macligatures
+end
+
+" Slightly increase the space between lines
+set linespace=2
+
 " Disable right scrollbar
 set guioptions-=r
 
 " Disable left scrollbar
 set guioptions-=L
-
-" The below mapping will change the behavior of the <Enter> key when the popup
-" menu is visible. In that case the Enter key will simply select the highlighted
-" menu item, just as <C-Y> does.
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<C-g>u\<CR>"
 
 " Plugins settings
 let g:jedi#auto_close_doc = 1

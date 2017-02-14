@@ -13,7 +13,6 @@ backup:
 	cp -f $(HOME)/.aliases $(HOME)/.aliases.bak 2>/dev/null || :
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
-	cp -f $(HOME)/.gvimrc $(HOME)/.gvimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
 
 bash:

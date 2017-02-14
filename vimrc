@@ -15,8 +15,6 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -59,6 +57,7 @@ set hlsearch
 set ignorecase
 set backspace=2
 set laststatus=2
+set ruler
 set hidden
 set cursorline
 
@@ -122,8 +121,5 @@ let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
-
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 
 py import sys; sys.path.append('/Users/andrey/miniconda3/lib/python3.5/site-packages')

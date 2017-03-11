@@ -1,4 +1,4 @@
-all: backup deps bash tmux vim
+all: backup deps bash tmux vim zsh
 
 current_dir = $(shell pwd)
 
@@ -14,6 +14,15 @@ backup:
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
+
+rmbackup:
+	rm -f $(HOME)/.bash_profile.bak
+	rm -f $(HOME)/.bashrc.bak
+	rm -f $(HOME)/.aliases.bak
+	rm -f $(HOME)/.tmux.conf.bak
+	rm -f $(HOME)/.vimrc.bak
+	rm -f $(HOME)/.zshrc.bak
+
 
 bash:
 	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile

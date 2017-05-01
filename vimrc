@@ -71,6 +71,8 @@ set list
 
 try
     colorscheme solarized
+    hi CursorLineNr ctermbg=0
+    call togglebg#map("<leader>bg")
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -125,6 +127,9 @@ set colorcolumn=80,120
 " Set symbol to indicate whitespaces
 set listchars=eol:¬,tab:>-
 
+" Set working directory to the current filea by <leader>cd
+nnoremap <leader>cd :cd %:p:h<CR>
+
 " Plugins settings
 let g:jedi#auto_close_doc = 1
 
@@ -135,3 +140,4 @@ au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
 
 map <leader>h :Dash<cr>
+

@@ -145,6 +145,12 @@ nnoremap <leader>cd :cd %:p:h<CR>
 " Spell both English and Russian languages
 set spelllang=en_us,ru_ru
 
+" Copy to the macOS buffer with <leader>yy and paste with <leader>P
+if has('mac')
+    map <leader>yy :.w !pbcopy<CR><CR>
+    map <leader>P :r !pbpaste<CR>
+endif
+
 " Plugins settings
 let g:jedi#auto_close_doc = 1
 

@@ -133,11 +133,13 @@ set listchars=eol:¬,tab:>-
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 
 " Switch to the Russian keymap by pressing F9
-inoremap <F9> <c-^>
-cnoremap <F9> <c-^>
-nnoremap <F9> i<c-^><ESC>
+inoremap <leader><leader> <c-^>
+cnoremap <leader><leader> <c-^>
+nnoremap <leader><leader> i<c-^><ESC>w
 
 " Set working directory to the current file by <leader>cd
 nnoremap <leader>cd :cd %:p:h<CR>

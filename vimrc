@@ -22,7 +22,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'rizzatti/dash.vim'
-"Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,12 +67,14 @@ set laststatus=2
 set ruler
 set hidden
 set cursorline
-set list
 
 try
     colorscheme solarized
     hi CursorLineNr ctermbg=0
     call togglebg#map("<leader>bg")
+    " The color used for parentheses by default is too aggressive,
+    " it's better to change it to something more accessible
+    hi Delimiter ctermfg=12
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -105,9 +107,9 @@ au BufWritePre * :%s/\s\+$//e
 set scrolloff=1
 
 " Set font in GUI
-set guifont=Fira\ Code:h12
+set guifont=Source\ Code\ Pro:h12
 
-" The font I use supports ligatures, let's turn them on
+" Turn on ligatures (for fonts that support them)
 if has('gui_running')
     set macligatures
 end
@@ -127,8 +129,21 @@ set colorcolumn=80,120
 " Set symbol to indicate whitespaces
 set listchars=eol:¬,tab:>-
 
-" Set working directory to the current filea by <leader>cd
+" Russian language support
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
+" Switch to the Russian keymap by pressing F9
+inoremap <F9> <c-^>
+cnoremap <F9> <c-^>
+nnoremap <F9> i<c-^><ESC>
+
+" Set working directory to the current file by <leader>cd
 nnoremap <leader>cd :cd %:p:h<CR>
+
+" Spell both English and Russian languages
+set spelllang=en_us,ru_ru
 
 " Plugins settings
 let g:jedi#auto_close_doc = 1
@@ -139,5 +154,6 @@ au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
 
+" Search a word under the cursor in Dash by pressing <leader>h
 map <leader>h :Dash<cr>
 

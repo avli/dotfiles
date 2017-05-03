@@ -71,7 +71,7 @@ set cursorline
 try
     colorscheme solarized
     hi CursorLineNr ctermbg=0
-    call togglebg#map("<leader>bg")
+    call togglebg#map("<F6>")
     " The color used for parentheses by default is too aggressive,
     " it's better to change it to something more accessible
     hi Delimiter ctermfg=12
@@ -134,12 +134,6 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-
-
-" Switch to the Russian keymap by pressing F9
-inoremap <leader><leader> <c-^>
-cnoremap <leader><leader> <c-^>
-nnoremap <leader><leader> i<c-^><ESC>w
 
 " Set working directory to the current file by <leader>cd
 nnoremap <leader>cd :cd %:p:h<CR>

@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'chriskempson/base16-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
@@ -64,7 +63,7 @@ set cursorline
 set background=light
 
 try
-    colorscheme base16-tomorrow-night
+    colorscheme default
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry

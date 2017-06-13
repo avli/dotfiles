@@ -7,3 +7,5 @@ alias vi=vim
 alias e="emacs -nw"
 alias octave="octave-cli"
 alias jn="jupyter notebook"
+alias python=python3
+alias pip=pip3

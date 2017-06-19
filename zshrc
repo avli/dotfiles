@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="sorin"
+ZSH_THEME="steeef"
 DISABLE_AUTO_UPDATE="true"
 
 DEFAULT_USER=`whoami`

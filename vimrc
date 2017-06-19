@@ -69,7 +69,7 @@ set hidden
 set cursorline
 
 try
-    colorscheme default
+    colorscheme jellybeans
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry

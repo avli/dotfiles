@@ -20,6 +20,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'rizzatti/dash.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,8 +68,6 @@ set ruler
 set hidden
 set cursorline
 
-set background=light
-
 try
     colorscheme default
 catch /^Vim\%((\a\+)\)\=:E185/
@@ -96,9 +102,9 @@ au BufWritePre * :%s/\s\+$//e
 set scrolloff=1
 
 " Set font in GUI
-set guifont=PragmataPro:h12
+set guifont=Source\ Code\ Pro:h12
 
-" The font I use supports ligatures, let's turn them on
+" Turn on ligatures (for fonts that support them)
 if has('gui_running')
     set macligatures
 end
@@ -112,6 +118,30 @@ set guioptions-=r
 " Disable left scrollbar
 set guioptions-=L
 
+" 80 and 120 column guides
+set colorcolumn=80,120
+
+" Set symbol to indicate whitespaces
+set listchars=eol:¬,tab:>-
+
+" Russian language support
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+" Set working directory to the current file by <leader>cd
+nnoremap <leader>cd :cd %:p:h<CR>
+
+" Spell both English and Russian languages
+set spelllang=en_us,ru_ru
+
+" Copy to the macOS buffer with <leader>yy and paste with <leader>P
+if has('mac')
+    map <leader>yy :.w !pbcopy<CR><CR>
+    map <leader>P :r !pbpaste<CR>
+endif
+
 " Plugins settings
 let g:jedi#auto_close_doc = 1
 
@@ -121,4 +151,6 @@ au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
 
-py import sys; sys.path.append('/Users/andrey/miniconda3/lib/python3.5/site-packages')
+" Search a word under the cursor in Dash by pressing <leader>h
+map <leader>h :Dash<cr>
+

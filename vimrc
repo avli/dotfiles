@@ -67,6 +67,7 @@ set laststatus=2
 set ruler
 set hidden
 set cursorline
+set exrc
 
 try
     colorscheme jellybeans
@@ -154,3 +155,5 @@ au FileType clojure let b:delimitMate_quotes = "\""
 " Search a word under the cursor in Dash by pressing <leader>h
 map <leader>h :Dash<cr>
 
+" Disable unsecure commands in ".vimrc" and ".exrc"
+set secure

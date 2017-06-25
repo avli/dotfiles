@@ -71,6 +71,7 @@ set exrc
 
 try
     colorscheme jellybeans
+    hi CursorLineNr ctermfg=59
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -151,6 +152,9 @@ let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
+
+" Automatically change the directory to the directory of the opened file
+autocmd BufEnter * silent! lcd %:p:h
 
 " Search a word under the cursor in Dash by pressing <leader>h
 map <leader>h :Dash<cr>

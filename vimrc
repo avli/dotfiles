@@ -159,5 +159,16 @@ autocmd BufEnter * silent! lcd %:p:h
 " Search a word under the cursor in Dash by pressing <leader>h
 map <leader>h :Dash<cr>
 
+" Surround bindings for Django templates,
+" see https://code.djangoproject.com/wiki/UsingVimWithDjango
+let g:surround_{char2nr("v")} = "{{ \r }}"
+let g:surround_{char2nr("{")} = "{{ \r }}"
+let g:surround_{char2nr("%")} = "{% \r %}"
+let g:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+let g:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+let g:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+let g:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+let g:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
+
 " Disable unsecure commands in ".vimrc" and ".exrc"
 set secure

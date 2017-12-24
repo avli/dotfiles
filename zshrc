@@ -1,8 +1,10 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="steeef"
+ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 
 DEFAULT_USER=`whoami`
+
+DISABLE_AUTO_TITLE="true"
 
 plugins=(git brew brew-cask npm pip tmux)
 

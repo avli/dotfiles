@@ -24,10 +24,11 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mileszs/ack.vim'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,12 +67,13 @@ set backspace=2
 set laststatus=2
 set ruler
 set hidden
-set cursorline
+"set cursorline
 set exrc
 
 try
-    colorscheme jellybeans
-    hi CursorLineNr ctermfg=59
+    "colorscheme wombat256mod
+    colorscheme solarized
+    "hi ColorColumn ctermbg=238 guibg=#383838
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -92,6 +94,15 @@ map <leader>ss :setlocal spell!<cr>
 " combination
 map <leader>cd :cd %:p:h<cr>
 
+" Open new tab with <leader>t
+map <leader>t :tabnew<cr>
+
+" Toggle NERDTree with <leader>e (leader - explore)
+map <leader>e :NERDTreeToggle<cr>
+
+" Toggle Tagbar with <leader>t
+map <leader>t :TagbarToggle<cr>
+
 " Disable all bells
 se vb t_vb=
 
@@ -104,7 +115,7 @@ au BufWritePre * :%s/\s\+$//e
 set scrolloff=1
 
 " Set font in GUI
-set guifont=Source\ Code\ Pro:h12
+set guifont=Menlo:h12
 
 " Turn on ligatures (for fonts that support them)
 if has('gui_running')
@@ -127,7 +138,7 @@ set colorcolumn=80,120
 set listchars=eol:¬,tab:>-
 
 " Russian language support
-set keymap=russian-jcukenwin
+"set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
@@ -154,7 +165,7 @@ au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
 
 " Automatically change the directory to the directory of the opened file
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 
 " Search a word under the cursor in Dash by pressing <leader>h
 map <leader>h :Dash<cr>
@@ -172,3 +183,8 @@ let g:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
 " Disable unsecure commands in ".vimrc" and ".exrc"
 set secure
+
+set rtp+=/Users/andrey/Library/Python/3.6/lib/python/site-packages/powerline/bindings/vim
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup

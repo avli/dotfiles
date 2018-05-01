@@ -29,6 +29,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mileszs/ack.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -188,3 +189,6 @@ set rtp+=/Users/andrey/Library/Python/3.6/lib/python/site-packages/powerline/bin
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+" Toggle background with F5
+call togglebg#map("<F5>")

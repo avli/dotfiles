@@ -24,8 +24,8 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'rizzatti/dash.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mileszs/ack.vim'
 Plugin 'leafgarland/typescript-vim'
@@ -71,11 +71,18 @@ set ruler
 set hidden
 "set cursorline
 set exrc
+set mouse=a
 
 try
     "colorscheme wombat256mod
-    colorscheme solarized
-    "hi ColorColumn ctermbg=238 guibg=#383838
+    "colorscheme solarized
+    "colorscheme koehler
+    "colorscheme delek
+    "colorscheme Tomorrow-Night
+    set bg=dark
+    "colorscheme onedark
+    "hi PreProc ctermfg=5
+    hi ColorColumn ctermbg=238 guibg=#383838
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -117,7 +124,7 @@ au BufWritePre * :%s/\s\+$//e
 set scrolloff=1
 
 " Set font in GUI
-set guifont=Menlo:h12
+set guifont=Fira\ Code:h13
 
 " Turn on ligatures (for fonts that support them)
 if has('gui_running')
@@ -186,10 +193,14 @@ let g:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 " Disable unsecure commands in ".vimrc" and ".exrc"
 set secure
 
-set rtp+=/Users/andrey/Library/Python/3.6/lib/python/site-packages/powerline/bindings/vim
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"set rtp+=/Users/andrey/Library/Python/3.7/lib/python/site-packages/powerline/bindings/vim
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
 " Toggle background with F5
 call togglebg#map("<F5>")
+
+let g:syntastic_python_checkers = ["flake8"]
+
+let g:airline_extensions = ['branch', 'tabline']

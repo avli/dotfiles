@@ -6,7 +6,7 @@ DEFAULT_USER=`whoami`
 
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git brew brew-cask npm pip tmux)
+plugins=(git pip pyenv tmux)
 
 source $ZSH/oh-my-zsh.sh
 

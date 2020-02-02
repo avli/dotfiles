@@ -74,12 +74,12 @@ set exrc
 set mouse=a
 
 try
-    "colorscheme wombat256mod
+    colorscheme wombat256mod
     "colorscheme solarized
     "colorscheme koehler
     "colorscheme delek
     "colorscheme Tomorrow-Night
-    set bg=dark
+    "set bg=dark
     "colorscheme onedark
     "hi PreProc ctermfg=5
     hi ColorColumn ctermbg=238 guibg=#383838

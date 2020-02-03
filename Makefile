@@ -23,7 +23,6 @@ rmbackup:
 	rm -f $(HOME)/.vimrc.bak
 	rm -f $(HOME)/.zshrc.bak
 
-
 bash:
 	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile
 	ln -sF $(current_dir)/bashrc $(HOME)/.bashrc

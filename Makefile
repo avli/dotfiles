@@ -4,8 +4,8 @@ current_dir = $(shell pwd)
 
 deps:
 	brew update
-	brew install --force --override-system-vi vim
-	brew install --force reattach-to-user-namespace
+	brew upgrade
+	cat brew | xargs brew install
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :

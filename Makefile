@@ -23,10 +23,12 @@ rmbackup:
 	rm -f $(HOME)/.vimrc.bak
 	rm -f $(HOME)/.zshrc.bak
 
-bash:
+aliases:
+	ln -sF $(current_dir)/aliases $(HOME)/.aliases
+
+bash:	aliases
 	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile
 	ln -sF $(current_dir)/bashrc $(HOME)/.bashrc
-	ln -sF $(current_dir)/aliases $(HOME)/.aliases
 
 tmux:
 	ln -sF $(current_dir)/tmux.conf $(HOME)/.tmux.conf
@@ -39,5 +41,7 @@ vim:
 	ln -sF $(current_dir)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
 
-zsh:
+zsh:	aliases
 	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc
+
+.PHONY: aliases

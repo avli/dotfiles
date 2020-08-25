@@ -6,7 +6,7 @@ deps:
 	brew update
 	brew upgrade
 	brew tap homebrew/cask-fonts
-	cat brew | xargs brew install
+	cat leaves | xargs brew install
 	cat casks | xargs brew cask install
 
 backup:

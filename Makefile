@@ -6,6 +6,7 @@ deps:
 	brew update
 	brew upgrade
 	cat brew | xargs brew install
+	cat casks | xargs brew cask install
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :

@@ -3,3 +3,4 @@ leiningen
 node
 osx-cpu-temp
 pyenv
+tmux

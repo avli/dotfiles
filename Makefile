@@ -27,10 +27,6 @@ rmbackup:
 aliases:
 	ln -sF $(current_dir)/aliases $(HOME)/.aliases
 
-bash:	aliases
-	ln -sF $(current_dir)/bash_profile $(HOME)/.bash_profile
-	ln -sF $(current_dir)/bashrc $(HOME)/.bashrc
-
 tmux:
 	ln -sF $(current_dir)/tmux.conf $(HOME)/.tmux.conf
 

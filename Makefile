@@ -1,4 +1,4 @@
-all: backup deps bash tmux vim zsh
+all: backup deps tmux vim zsh
 
 current_dir = $(shell pwd)
 

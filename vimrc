@@ -74,7 +74,7 @@ set exrc
 set mouse=a
 
 try
-    colorscheme wombat256mod
+    colorscheme vividchalk
     hi ColorColumn ctermbg=238 guibg=#383838
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it

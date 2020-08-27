@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mate'
+  export EDITOR='mate -w'
 fi
 
 if [ -f $HOME/.aliases ]; then

@@ -1,6 +1,10 @@
+aspell
+ctags
+fzf
 git
 leiningen
 node
 osx-cpu-temp
 pyenv
+the_silver_searcher
 tmux

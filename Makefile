@@ -6,8 +6,8 @@ deps:
 	brew update
 	brew upgrade
 	brew tap homebrew/cask-fonts
-	cat leaves | xargs brew install
-	cat casks | xargs brew cask install
+	cat brew/leaves | xargs brew install
+	cat brew/casks | xargs brew cask install
 
 backup:
 	cp -f $(HOME)/.bash_profile $(HOME)/.bash_profile.bak 2>/dev/null || :

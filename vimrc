@@ -32,6 +32,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'udalov/kotlin-vim'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,8 +75,8 @@ set exrc
 set mouse=a
 
 try
-    colorscheme vividchalk
-    hi ColorColumn ctermbg=238 guibg=#383838
+    colorscheme Tomorrow-Night
+    "hi ColorColumn ctermbg=238 guibg=#383838
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
@@ -184,3 +185,5 @@ call togglebg#map("<F5>")
 let g:syntastic_python_checkers = ["flake8"]
 
 let g:airline_extensions = ['branch', 'tabline']
+
+set rtp+=/usr/local/opt/fzf

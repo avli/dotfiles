@@ -1,10 +1,26 @@
-autoload -Uz compinit
-compinit -i
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="kolo"
+DISABLE_AUTO_UPDATE="true"
 
-export PS1="🤔 %F{green}%n %F{yellow}in %F{blue}%1d %F{magenta}$ %f"
+DEFAULT_USER=`whoami`
 
-test -f ~/.zshrc.local && . ~/.zshrc.local
-test -f ~/.aliases && . ~/.aliases
+DISABLE_AUTO_TITLE="true"
 
-eval "$(pyenv init -)"
+plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mate'
+fi
+
+if [ -f $HOME/.aliases ]; then
+    source $HOME/.aliases
+fi
+
+if [ -f $HOME/.zshrc.local ]; then
+    source $HOME/.zshrc.local
+fi

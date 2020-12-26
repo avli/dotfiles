@@ -75,8 +75,8 @@ set exrc
 set mouse=a
 
 try
-    colorscheme Tomorrow-Night
-    "hi ColorColumn ctermbg=238 guibg=#383838
+    colorscheme wombat256mod
+    hi ColorColumn ctermbg=238 guibg=#383838
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry

@@ -6,7 +6,7 @@ DEFAULT_USER=`whoami`
 
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git)
+plugins=(git pyenv)
 
 source $ZSH/oh-my-zsh.sh
 

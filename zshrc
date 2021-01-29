@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="kolo"
+ZSH_THEME="afowler"
 DISABLE_AUTO_UPDATE="true"
 
 DEFAULT_USER=`whoami`
@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mate -w'
+  export EDITOR='code -w'
 fi
 
 if [ -f $HOME/.aliases ]; then

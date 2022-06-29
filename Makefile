@@ -46,4 +46,4 @@ vim:
 zsh:	aliases
 	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc
 
-.PHONY: aliases
+.PHONY: deps backup rmbackup aliases bash tmux vim

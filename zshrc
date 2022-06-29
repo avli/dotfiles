@@ -6,7 +6,7 @@ DEFAULT_USER=`whoami`
 
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git pyenv)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,3 +24,5 @@ fi
 if [ -f $HOME/.zshrc.local ]; then
     source $HOME/.zshrc.local
 fi
+
+eval "$(pyenv init -)"

@@ -28,3 +28,5 @@ if [ -f $HOME/.zshrc.local ]; then
 fi
 
 eval "$(pyenv init -)"
+
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

@@ -17,6 +17,8 @@ else
   export EDITOR='idea -e'
 fi
 
+unsetopt beep
+
 if [ -f $HOME/.aliases ]; then
     source $HOME/.aliases
 fi

@@ -16,7 +16,6 @@ backup:
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
-	cp -f $(HOME)/.p10k.zsh $(HOME)/.p10k.zsh.bak 2>/dev/null || :
 
 rmbackup:
 	rm -f $(HOME)/.bash_profile.bak
@@ -46,7 +45,5 @@ vim:
 
 zsh:	aliases
 	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $(HOME)/.oh-my-zsh/custom/themes/powerlevel10k
-	ln -sF $(current_dir)/p10k.zsh $(HOME)/.p10k.zsh
 
 .PHONY: deps backup rmbackup aliases bash tmux vim

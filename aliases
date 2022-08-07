@@ -1,8 +1,4 @@
-if [[ -n $TERMINAL_EMULATOR && $TERMINAL_EMULATOR = "JetBrains-JediTerm" ]]; then
-  alias ls="exa --git --icons"
-else
-  alias ls="exa --git"
-fi
+alias ls="exa --git"
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ll -a --grid"

@@ -14,15 +14,21 @@ backup:
 	cp -f $(HOME)/.tmux.conf $(HOME)/.tmux.conf.bak 2>/dev/null || :
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
+	cp -rf $(HOME)/.emacs.d $(HOME)/.emacs.d.bak 2>/dev/null || :
 
 rmbackup:
 	rm -f $(HOME)/.aliases.bak
 	rm -f $(HOME)/.tmux.conf.bak
 	rm -f $(HOME)/.vimrc.bak
 	rm -f $(HOME)/.zshrc.bak
+	rm -rf $(HOME)/.emacs.d.bak
 
 aliases:
 	ln -sF $(current_dir)/aliases $(HOME)/.aliases
+
+emacs:
+	mkdir -p $(HOME)/.emacs.d
+	ln -sF $(current_dir)/init.el $(HOME)/.emacs.d/init.el
 
 tmux:
 	ln -sF $(current_dir)/tmux.conf $(HOME)/.tmux.conf
@@ -38,4 +44,4 @@ vim:
 zsh:	aliases
 	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc
 
-.PHONY: deps backup rmbackup aliases tmux vim
+.PHONY: deps backup rmbackup aliases emacs tmux vim

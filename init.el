@@ -1,0 +1,5 @@
+(ido-mode 1)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(setq ring-bell-function 'ignore)
+(setq make-backup-files nil)
+(setq ispell-program-name "/usr/local/bin/aspell")

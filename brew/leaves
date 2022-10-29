@@ -1,4 +1,5 @@
 ant
+aspell
 cloc
 cscope
 ctags
@@ -14,6 +15,7 @@ neofetch
 node
 openjdk@11
 osx-cpu-temp
+pipenv
 pyenv
 python@3.9
 telnet

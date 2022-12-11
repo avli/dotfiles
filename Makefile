@@ -15,6 +15,8 @@ backup:
 	cp -f $(HOME)/.vimrc $(HOME)/.vimrc.bak 2>/dev/null || :
 	cp -f $(HOME)/.zshrc $(HOME)/.zshrc.bak 2>/dev/null || :
 	cp -rf $(HOME)/.emacs.d $(HOME)/.emacs.d.bak 2>/dev/null || :
+	cp -f $(HOME)/.aspell.en.prepl $(HOME)/.aspell.en.prepl.bak 2>/dev/null || :
+	cp -f $(HOME)/.aspell.en.pws $(HOME)/.aspell.en.pws.bak 2>/dev/null || :
 
 rmbackup:
 	rm -f $(HOME)/.aliases.bak
@@ -22,9 +24,15 @@ rmbackup:
 	rm -f $(HOME)/.vimrc.bak
 	rm -f $(HOME)/.zshrc.bak
 	rm -rf $(HOME)/.emacs.d.bak
+	rm -f $(HOME)/.aspell.en.prepl.bak
+	rm -f $(HOME)/.aspell.en.pws.bak
 
 aliases:
 	ln -sF $(current_dir)/aliases $(HOME)/.aliases
+
+aspell:
+	ln -sF $(current_dir)/aspell.en.prepl $(HOME)/.aspell.en.prepl
+	ln -sF $(current_dir)/aspell.en.pws $(HOME)/.aspell.en.pws
 
 emacs:
 	mkdir -p $(HOME)/.emacs.d

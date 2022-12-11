@@ -37,6 +37,8 @@ aspell:
 emacs:
 	mkdir -p $(HOME)/.emacs.d
 	ln -sF $(current_dir)/init.el $(HOME)/.emacs.d/init.el
+	(cd $(HOME)/.emacs.d && git clone https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode.git)
+	(cd $(HOME)/.emacs.d && git clone https://github.com/jrblevin/markdown-mode.git)
 
 tmux:
 	ln -sF $(current_dir)/tmux.conf $(HOME)/.tmux.conf

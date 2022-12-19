@@ -17,6 +17,7 @@ backup:
 	cp -rf $(HOME)/.emacs.d $(HOME)/.emacs.d.bak 2>/dev/null || :
 	cp -f $(HOME)/.aspell.en.prepl $(HOME)/.aspell.en.prepl.bak 2>/dev/null || :
 	cp -f $(HOME)/.aspell.en.pws $(HOME)/.aspell.en.pws.bak 2>/dev/null || :
+	cp -f $(HOME)/.aspell.conf $(HOME)/.aspell.conf 2>/dev/null || :
 
 rmbackup:
 	rm -f $(HOME)/.aliases.bak
@@ -26,6 +27,7 @@ rmbackup:
 	rm -rf $(HOME)/.emacs.d.bak
 	rm -f $(HOME)/.aspell.en.prepl.bak
 	rm -f $(HOME)/.aspell.en.pws.bak
+	rm -f $(HOME)/.aspell.conf
 
 aliases:
 	ln -sF $(current_dir)/aliases $(HOME)/.aliases
@@ -33,6 +35,7 @@ aliases:
 aspell:
 	ln -sF $(current_dir)/aspell.en.prepl $(HOME)/.aspell.en.prepl
 	ln -sF $(current_dir)/aspell.en.pws $(HOME)/.aspell.en.pws
+	echo "dict-dir $(HOME)/.emacs.d/dictionary" > ~/.aspell.conf
 
 emacs:
 	mkdir -p $(HOME)/.emacs.d

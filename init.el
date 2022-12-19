@@ -34,6 +34,7 @@
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook 'flyspell-buffer)
 
 (column-number-mode 1)
 

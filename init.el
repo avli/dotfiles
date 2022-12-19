@@ -4,6 +4,8 @@
 (setq make-backup-files nil)
 (setq ispell-program-name "/usr/local/bin/aspell")
 
+(setq make-backup-files nil)
+
 (add-to-list 'load-path
 	     "~/.emacs.d/kotlin-mode")
 

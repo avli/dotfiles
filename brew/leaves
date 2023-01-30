@@ -1,4 +1,3 @@
-ant
 aspell
 cloc
 cscope
@@ -6,18 +5,13 @@ ctags
 exa
 fzf
 git
-gradle
-groovy
-kotlin
-leiningen
-maven
 neofetch
 node
-openjdk@11
 osx-cpu-temp
 pipenv
 pyenv
 python@3.9
+sdkman/tap/sdkman-cli
 telnet
 the_silver_searcher
 tmux

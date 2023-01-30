@@ -6,6 +6,7 @@ deps:
 	brew update
 	brew upgrade
 	brew tap homebrew/cask-fonts
+	brew tap sdkman/tap
 	cat brew/leaves | xargs brew install
 	cat brew/casks | xargs brew install --cask
 

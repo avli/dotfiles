@@ -1,6 +1,5 @@
 aspell
 cloc
-cscope
 ctags
 exa
 fzf
@@ -17,4 +16,3 @@ the_silver_searcher
 tmux
 vim
 wrk
-youtube-dl

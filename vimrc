@@ -158,6 +158,9 @@ au FileType python let b:delimitMate_nesting_quotes = ["'", "\""]
 au FileType python,clojure setlocal completeopt-=preview
 au FileType clojure let b:delimitMate_quotes = "\""
 
+au FileType markdown setlocal textwidth=78
+au FileType markdown setlocal spell
+
 " Automatically change the directory to the directory of the opened file
 " autocmd BufEnter * silent! lcd %:p:h
 

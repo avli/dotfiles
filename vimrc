@@ -80,6 +80,10 @@ catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
 
+if $ITERM_PROFILE == "Solarized Dark" || $ITERM_PROFILE == "Solarized Light"
+    color solarized
+endif
+
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 

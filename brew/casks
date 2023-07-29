@@ -2,6 +2,7 @@ anaconda
 android-file-transfer
 appcleaner
 cold-turkey-blocker
+cryptomator
 cyberduck
 daisydisk
 dash
@@ -10,17 +11,15 @@ djview
 docker
 firefox
 font-jetbrains-mono
+font-spectral
 google-chrome
 gpg-suite
-iterm2
 jetbrains-toolbox
 karabiner-elements
 keepassxc
-kobo
 monitorcontrol
 monodraw
 mos
-nextcloud
 obsidian
 openemu
 opera
@@ -33,8 +32,7 @@ slack
 sublime-text
 telegram-desktop
 tunnelblick
-vagrant
-virtualbox
 visual-studio-code
+vorta
 wireshark
 zoom

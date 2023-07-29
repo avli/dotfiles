@@ -1,9 +1,10 @@
 aspell
+borgbackup
 cloc
-ctags
 exa
 fzf
 git
+httpie
 neofetch
 node
 osx-cpu-temp

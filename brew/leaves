@@ -1,6 +1,5 @@
 aspell
-borgbackup
-cloc
+ctags
 exa
 fzf
 git
@@ -12,6 +11,8 @@ pipenv
 pyenv
 python@3.9
 sdkman/tap/sdkman-cli
+sevenzip
+syncthing
 telnet
 the_silver_searcher
 tmux

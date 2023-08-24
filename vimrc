@@ -73,6 +73,7 @@ set ruler
 set hidden
 set exrc
 set mouse=a
+set nowrap
 
 try
     hi ColorColumn ctermbg=238 guibg=#383838
@@ -82,6 +83,12 @@ endtry
 
 if $ITERM_PROFILE == "Solarized Dark" || $ITERM_PROFILE == "Solarized Light"
     color solarized
+else
+    color vividchalk
+    hi ColorColumn ctermbg=235
+    hi LineNr ctermbg=235
+    hi Search ctermbg=5
+    hi SpellLocal ctermbg=240
 endif
 
 " Toggle paste mode on and off
@@ -164,6 +171,11 @@ au FileType clojure let b:delimitMate_quotes = "\""
 
 au FileType markdown setlocal textwidth=78
 au FileType markdown setlocal spell
+au FileType markdown setlocal wrap
+
+au FileType rst setlocal textwidth=78
+au FileType rst setlocal spell
+au FileType rst setlocal wrap
 
 " Automatically change the directory to the directory of the opened file
 " autocmd BufEnter * silent! lcd %:p:h

@@ -1,9 +1,12 @@
 aspell
+cloc
 ctags
 exa
 fzf
 git
+htop
 httpie
+lolcat
 neofetch
 node
 osx-cpu-temp
@@ -12,7 +15,6 @@ pyenv
 python@3.9
 sdkman/tap/sdkman-cli
 sevenzip
-syncthing
 telnet
 the_silver_searcher
 tmux

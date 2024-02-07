@@ -1,7 +1,6 @@
 aspell
 cloc
 ctags
-exa
 fzf
 git
 htop
@@ -20,4 +19,3 @@ the_silver_searcher
 tmux
 vim
 wrk
-zsh-syntax-highlighting

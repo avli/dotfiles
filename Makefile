@@ -30,9 +30,6 @@ rmbackup:
 	rm -f $(HOME)/.aspell.en.pws.bak
 	rm -f $(HOME)/.aspell.conf
 
-aliases:
-	ln -sF $(current_dir)/aliases $(HOME)/.aliases
-
 aspell:
 	ln -sF $(current_dir)/aspell.en.prepl $(HOME)/.aspell.en.prepl
 	ln -sF $(current_dir)/aspell.en.pws $(HOME)/.aspell.en.pws
@@ -55,7 +52,7 @@ vim:
 	ln -sF $(current_dir)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
 
-zsh:	aliases
+zsh:
 	ln -sF $(current_dir)/zshrc $(HOME)/.zshrc
 
 .PHONY: deps backup rmbackup aliases emacs tmux vim

@@ -10,7 +10,7 @@ alias idea="idea -e"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.local/bin:/usr/local/sbin:$PATH"
 
 eval "$(pyenv init -)"
 
@@ -19,5 +19,7 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib"
+
+eval "$(fzf --zsh)"
 
 test -f ~/.zshrc.local && source ~/.zshrc.local

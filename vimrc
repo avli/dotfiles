@@ -84,11 +84,11 @@ endtry
 if $ITERM_PROFILE == "Solarized Dark" || $ITERM_PROFILE == "Solarized Light"
     color solarized
 else
-    color vividchalk
+    color wombat256mod
     hi ColorColumn ctermbg=235
-    hi LineNr ctermbg=235
-    hi Search ctermbg=5
-    hi SpellLocal ctermbg=240
+    "hi LineNr ctermbg=235
+    "hi Search ctermbg=5
+    "hi SpellLocal ctermbg=240
 endif
 
 " Toggle paste mode on and off

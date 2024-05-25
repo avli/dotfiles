@@ -6,6 +6,7 @@ git
 htop
 httpie
 lolcat
+mypy
 neofetch
 node
 osx-cpu-temp

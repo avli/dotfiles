@@ -12,6 +12,7 @@ neofetch
 node
 osx-cpu-temp
 pipenv
+poetry
 pyenv
 python@3.9
 sdkman/tap/sdkman-cli

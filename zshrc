@@ -20,6 +20,4 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(xcrun --show-sdk-path)/usr/lib"
 
-eval "$(fzf --zsh)"
-
 test -f ~/.zshrc.local && source ~/.zshrc.local

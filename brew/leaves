@@ -1,14 +1,15 @@
 black
 git
+global
 httpie
 mypy
 node
 osx-cpu-temp
 poetry
-pyenv
+pygments
 python@3.9
-sdkman/tap/sdkman-cli
 sevenzip
 telnet
+uv
 vim
 wrk

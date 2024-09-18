@@ -3,7 +3,6 @@ git
 global
 httpie
 mypy
-node
 osx-cpu-temp
 poetry
 pygments

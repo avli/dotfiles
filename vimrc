@@ -82,7 +82,12 @@ catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
 endtry
 
+let s:is_linux = system("uname -s") =~ "Linux"
+
 if $ITERM_PROFILE == "Solarized Dark" || $ITERM_PROFILE == "Solarized Light"
+    color solarized
+elseif s:is_linux && (has("gui_gtk2") || has("gui_gtk3") || has("gui_gtk4"))
+    set bg=dark
     color solarized
 else
     color wombat256mod
@@ -136,6 +141,11 @@ set guioptions-=r
 
 " Disable left scrollbar
 set guioptions-=L
+
+" https://github.com/vim/vim/issues/2957
+if s:is_linux
+    set guioptions-=T
+endif
 
 " 80 and 120 column guides
 set colorcolumn=80,120

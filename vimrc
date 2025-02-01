@@ -68,7 +68,6 @@ set autoindent
 set number
 set hlsearch
 set ignorecase
-set backspace=2
 set laststatus=2
 set ruler
 set hidden
